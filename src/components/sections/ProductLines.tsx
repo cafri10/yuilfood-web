@@ -76,7 +76,7 @@ function ProductCard({
         <ul style={{ display: "flex", flexDirection: "column", gap: "8px", flex: 1, marginBottom: "20px", listStyle: "none", padding: 0, margin: "0 0 20px 0" }}>
           {points.map((p) => (
             <li key={p} style={{ display: "flex", gap: "8px" }}>
-              <span style={{ color: "var(--primary)", flexShrink: 0, marginTop: "2px" }}>●</span>
+              <span style={{ color: "var(--ink-muted-48)", flexShrink: 0, marginTop: "2px" }}>—</span>
               <span className="text-caption" style={{ color: "var(--ink)" }}>{p}</span>
             </li>
           ))}

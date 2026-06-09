@@ -17,27 +17,27 @@ const base = "inline-flex items-center justify-center gap-2 cursor-pointer selec
 
 const variants: Record<Variant, { style: React.CSSProperties; className: string }> = {
   primary: {
-    className: "text-button-utility",
+    className: "text-button-utility hover:opacity-80",
     style: {
       background: "var(--primary)",
-      color: "#ffffff",
-      borderRadius: "var(--rounded-pill)",
+      color: "var(--canvas)",
+      borderRadius: "var(--rounded-sm)",
       padding: "11px 22px",
       border: "none",
     },
   },
   secondary: {
-    className: "text-button-utility",
+    className: "text-button-utility hover:opacity-80",
     style: {
       background: "transparent",
       color: "var(--primary)",
       border: "1px solid var(--primary)",
-      borderRadius: "var(--rounded-pill)",
+      borderRadius: "var(--rounded-sm)",
       padding: "11px 22px",
     },
   },
   "dark-utility": {
-    className: "text-button-utility",
+    className: "text-button-utility hover:opacity-80",
     style: {
       background: "var(--ink)",
       color: "var(--body-on-dark)",
@@ -47,21 +47,21 @@ const variants: Record<Variant, { style: React.CSSProperties; className: string 
     },
   },
   pearl: {
-    className: "text-caption",
+    className: "text-caption hover:opacity-80",
     style: {
       background: "var(--surface-pearl)",
       color: "var(--ink-muted-80)",
-      borderRadius: "var(--rounded-md)",
+      borderRadius: "var(--rounded-sm)",
       padding: "8px 16px",
-      border: "3px solid var(--divider-soft)",
+      border: "1px solid var(--divider-soft)",
     },
   },
   hero: {
-    className: "text-button-large",
+    className: "text-button-large hover:opacity-80",
     style: {
       background: "var(--primary)",
-      color: "#ffffff",
-      borderRadius: "var(--rounded-pill)",
+      color: "var(--canvas)",
+      borderRadius: "var(--rounded-sm)",
       padding: "14px 28px",
       border: "none",
     },

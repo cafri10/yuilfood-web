@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@fontsource/jetbrains-mono": "^5.2.8",
     "@fontsource/pretendard": "^5.2.5",
     "@hookform/resolvers": "^5.2.2",
     "clsx": "^2.1.1",

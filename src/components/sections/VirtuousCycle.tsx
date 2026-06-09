@@ -55,9 +55,10 @@ export function VirtuousCycle() {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  background: "var(--primary)",
-                  color: "#ffffff",
-                  fontWeight: 600,
+                  background: "rgba(255,255,255,0.08)",
+                  color: "var(--primary-on-dark)",
+                  fontFamily: "\"JetBrains Mono\", ui-monospace, monospace",
+                  fontWeight: 500,
                   fontSize: "13px",
                   marginBottom: "12px",
                 }}
@@ -91,8 +92,9 @@ export function VirtuousCycle() {
         {/* 인용 */}
         <blockquote
           style={{
-            borderLeft: "2px solid var(--primary)",
+            borderLeft: "2px solid var(--body-on-dark)",
             paddingLeft: "24px",
+            opacity: 0.85,
           }}
         >
           <p

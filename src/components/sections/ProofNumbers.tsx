@@ -1,8 +1,7 @@
 const stats = [
-  { value: "39.13%", label: "메탄 저감", sub: "4농가 실측" },
-  { value: "48.25%", label: "암모니아 저감", sub: "함평군 공인" },
-  { value: "430%", label: "ROI 실증", sub: "투자 2억→편익 10.6억" },
-  { value: "1.5억", label: "나비잠 매출", sub: "누적 완판" },
+  { value: "39.13%↓", label: "메탄 저감", sub: "양돈 4농가 실측" },
+  { value: "48.25%↓", label: "암모니아 저감", sub: "함평군 공인기관" },
+  { value: "430%", label: "ROI 실증", sub: "투자 2억 → 편익 10.6억" },
 ];
 
 export function ProofNumbers() {
@@ -25,7 +24,7 @@ export function ProofNumbers() {
 
         <div
           className="proof-grid"
-          style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "20px", marginBottom: "32px" }}
+          style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px", marginBottom: "32px" }}
         >
           {stats.map((s) => (
             <div
@@ -40,7 +39,7 @@ export function ProofNumbers() {
             >
               <p
                 className="text-display-md"
-                style={{ color: "var(--primary-on-dark)", marginBottom: "6px", fontVariantNumeric: "numerator" }}
+                style={{ color: "var(--primary-on-dark)", marginBottom: "6px", fontFamily: "\"JetBrains Mono\", ui-monospace, monospace" }}
               >
                 {s.value}
               </p>
@@ -62,7 +61,7 @@ export function ProofNumbers() {
 
       <style>{`
         @media (max-width: 833px) {
-          .proof-grid { grid-template-columns: 1fr 1fr !important; }
+          .proof-grid { grid-template-columns: 1fr 1fr 1fr !important; }
         }
         @media (max-width: 419px) {
           .proof-grid { grid-template-columns: 1fr !important; }

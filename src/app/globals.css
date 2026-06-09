@@ -1,65 +1,83 @@
 @import "tailwindcss";
 @import "@fontsource/pretendard/300.css";
 @import "@fontsource/pretendard/400.css";
+@import "@fontsource/pretendard/500.css";
 @import "@fontsource/pretendard/600.css";
 @import "@fontsource/pretendard/700.css";
+/* 푹: 숫자·메타·코드용 모노 (JetBrains Mono) — pnpm add @fontsource/jetbrains-mono */
+@import "@fontsource/jetbrains-mono/400.css";
+@import "@fontsource/jetbrains-mono/500.css";
 
-/* ─── Design Tokens ─────────────────────────────────────────────────── */
+/* ════════════════════════════════════════════════════════════════════
+   유일식품 × 푹(Puk) 디자인 시스템 — globals.css (드롭인 교체본)
+
+   기존 컴포넌트의 CSS 변수 "이름"은 그대로 두고 "값"만 푹으로 교체했습니다.
+   따라서 대부분의 섹션 컴포넌트는 수정 없이 푹 룩으로 전환됩니다.
+
+   바뀐 점
+   · Action Blue(#0066cc) 악센트 제거 → 잉크(ink)로 통일 (푹은 악센트 없음)
+   · 다크 타일(#272729) → dusk indigo(#2B3445)  (푹의 유일한 다크 면)
+   · 흰 캔버스 → 따뜻한 크림 종이(#F4F0E8)
+   · 둥근 모서리(pill/18px) → 직각 위주(0/4px)
+   · 헤딩 굵기 600 → 500 (강조는 사이즈로)
+   · 모노(JetBrains)를 숫자·메타에 사용
+   ════════════════════════════════════════════════════════════════════ */
+
 :root {
-  /* ── Brand & Accent ── */
-  --primary:          #0066cc;   /* Action Blue — 유일한 인터랙션 색상 */
-  --primary-focus:    #0071e3;   /* 키보드 포커스 링 전용 */
-  --primary-on-dark:  #2997ff;   /* 다크 타일 위 인라인 링크 전용 */
+  /* ── Brand & Accent — 악센트 없음, 잉크로 통일 ── */
+  --primary:          #1A1814;   /* 버튼·링크·라벨 = 잉크 (구 Action Blue 대체) */
+  --primary-focus:    #2B3445;   /* 포커스 링 = dusk */
+  --primary-on-dark:  #E4E0D2;   /* dusk 면 위 텍스트·값 = 종이톤 */
 
   /* ── Surface ── */
-  --canvas:           #ffffff;   /* 기본 캔버스 */
-  --canvas-parchment: #f5f5f7;   /* 교차 라이트 타일, 푸터 */
-  --surface-pearl:    #fafafc;   /* 보조 고스트 버튼 필 */
-  --surface-tile-1:   #272729;   /* 메인 다크 타일 */
-  --surface-tile-2:   #2a2a2c;   /* 연속 다크 타일 미세 분리 */
-  --surface-tile-3:   #252527;   /* 스택 하단·임베드 */
-  --surface-black:    #000000;   /* 글로벌 네비 배경 전용 */
-  --surface-chip:     #d2d2d7;   /* 이미지 위 원형 버튼 (~64% alpha) */
+  --canvas:           #F4F0E8;   /* 기본 캔버스 — 따뜻한 크림 */
+  --canvas-parchment: #FAF6EC;   /* 교차 라이트 타일·푸터 */
+  --surface-pearl:    #F8F5ED;   /* 보조 버튼 필 */
+  --surface-tile-1:   #2B3445;   /* 메인 다크 = dusk */
+  --surface-tile-2:   #2F3A4D;   /* 연속 다크 미세 분리 */
+  --surface-tile-3:   #232C3C;   /* 스택 하단 */
+  --surface-black:    #1A2030;   /* 글로벌 네비 배경 = dusk-deep */
+  --surface-chip:     #D6CFBE;   /* 이미지 위 칩 */
 
   /* ── Text ── */
-  --ink:              #1d1d1f;   /* 라이트 배경 헤드라인·본문 전체 */
-  --body:             #1d1d1f;   /* ink와 동일 */
-  --body-on-dark:     #ffffff;   /* 다크 타일·네비 위 모든 텍스트 */
-  --body-muted:       #cccccc;   /* 다크 타일 보조 카피 */
-  --ink-muted-80:     #333333;   /* Pearl Button 위 본문 */
-  --ink-muted-48:     #7a7a7a;   /* 비활성·법적고지 */
+  --ink:              #1A1814;   /* 따뜻한 근흑 — 헤드라인·본문 */
+  --body:             #1A1814;
+  --body-on-dark:     #E4E0D2;   /* dusk·네비 위 텍스트 */
+  --body-muted:       #9AA0AC;   /* dusk 위 보조 카피 */
+  --ink-muted-80:     #5A554A;   /* 보조 본문 */
+  --ink-muted-48:     #8E8876;   /* 비활성·법적고지·메타 */
 
   /* ── Hairlines & Borders ── */
-  --divider-soft:     #f0f0f0;   /* 보조 버튼 링 (실제 rgba(0,0,0,0.04)) */
-  --hairline:         #e0e0e0;   /* 유틸리티 카드 1px 보더 */
+  --divider-soft:     #E3DDCC;   /* 보조 디바이더 */
+  --hairline:         #D6CFBE;   /* 1px 헤어라인 보더 (푹 --rule) */
 
-  /* ── Border Radius ── */
+  /* ── Border Radius — 직각 위주 ── */
   --rounded-none: 0px;
-  --rounded-xs:   5px;
-  --rounded-sm:   8px;
-  --rounded-md:   11px;
-  --rounded-lg:   18px;
-  --rounded-pill: 9999px;
-  --rounded-full: 9999px;
+  --rounded-xs:   2px;
+  --rounded-sm:   4px;
+  --rounded-md:   4px;
+  --rounded-lg:   4px;
+  --rounded-pill: 4px;   /* 푹은 pill 미사용 — 버튼·태그가 직각으로 전환됨 */
+  --rounded-full: 9999px; /* 원형 점·아바타 전용 */
 
-  /* ── Spacing ── */
+  /* ── Spacing (4-pt) ── */
   --space-xxs:     4px;
   --space-xs:      8px;
   --space-sm:      12px;
-  --space-md:      17px;
+  --space-md:      16px;
   --space-lg:      24px;
   --space-xl:      32px;
   --space-xxl:     48px;
-  --space-section: 80px;
+  --space-section: 96px;   /* 푹: 여백 한 단계 넉넉하게 */
 
-  /* ── Shadow (콘텐츠 이미지 전용, 유일한 그림자) ── */
-  --shadow-content: rgba(0,0,0,0.22) 3px 5px 30px 0;
+  /* ── Shadow — 부드러운 들림만 ── */
+  --shadow-content: 0 18px 44px -24px rgba(26,24,20,0.30);
 }
 
 /* ─── Tailwind v4 Theme ─────────────────────────────────────────────── */
 @theme inline {
   --font-sans: "Pretendard", system-ui, sans-serif;
-  --font-mono: ui-monospace, monospace;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
 
   /* Colors */
   --color-primary:          var(--primary);
@@ -101,127 +119,128 @@ body {
   background: var(--canvas);
   color: var(--ink);
   font-family: "Pretendard", system-ui, sans-serif;
-  font-size: 17px;
-  line-height: 1.47;
-  letter-spacing: -0.374px;
+  font-size: 16px;
+  line-height: 1.65;
+  letter-spacing: -0.005em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ─── Typography Scale ──────────────────────────────────────────────── */
-/* 디자인 지침 토큰 기준 */
+::selection { background: #2B3445; color: #F4F0E8; }
 
+/* ─── Typography Scale — 헤딩 굵기 500, 자간 타이트 ─────────────────── */
 .text-hero-display {
   font-size: 56px;
-  font-weight: 600;
-  line-height: 1.07;
-  letter-spacing: -0.28px;
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.05em;
 }
 .text-display-lg {
   font-size: 40px;
-  font-weight: 600;
-  line-height: 1.10;
-  letter-spacing: 0;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
 }
 .text-display-md {
-  font-size: 34px;
-  font-weight: 600;
-  line-height: 1.47;
-  letter-spacing: -0.374px;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
 }
 .text-lead {
-  font-size: 28px;
+  font-size: 19px;
   font-weight: 400;
-  line-height: 1.14;
-  letter-spacing: 0.196px;
+  line-height: 1.55;
+  letter-spacing: -0.01em;
 }
 .text-lead-airy {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 300;
-  line-height: 1.5;
-  letter-spacing: 0;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
 }
 .text-tagline {
   font-size: 21px;
-  font-weight: 600;
-  line-height: 1.19;
-  letter-spacing: 0.231px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
 }
 .text-body-strong {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 600;
-  line-height: 1.24;
-  letter-spacing: -0.374px;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
 }
 .text-body {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 1.47;
-  letter-spacing: -0.374px;
+  line-height: 1.65;
+  letter-spacing: -0.005em;
 }
 .text-dense-link {
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 400;
-  line-height: 2.41;
-  letter-spacing: 0;
+  line-height: 2.2;
+  letter-spacing: -0.005em;
 }
 .text-caption {
   font-size: 14px;
   font-weight: 400;
-  line-height: 1.43;
-  letter-spacing: -0.224px;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
 }
 .text-caption-strong {
   font-size: 14px;
-  font-weight: 600;
-  line-height: 1.29;
-  letter-spacing: -0.224px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
 }
 .text-button-large {
-  font-size: 18px;
-  font-weight: 300;
+  font-size: 15px;
+  font-weight: 500;
   line-height: 1;
-  letter-spacing: 0;
+  letter-spacing: -0.005em;
 }
 .text-button-utility {
   font-size: 14px;
-  font-weight: 400;
-  line-height: 1.29;
-  letter-spacing: -0.224px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.005em;
 }
 .text-fine-print {
   font-size: 12px;
   font-weight: 400;
-  line-height: 1;
-  letter-spacing: -0.12px;
+  line-height: 1.4;
+  letter-spacing: 0;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
 }
 .text-micro-legal {
   font-size: 10px;
   font-weight: 400;
   line-height: 1.3;
-  letter-spacing: -0.08px;
+  letter-spacing: 0;
 }
 .text-nav-link {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 400;
   line-height: 1;
-  letter-spacing: -0.12px;
+  letter-spacing: -0.005em;
 }
 
 /* ─── Responsive Typography ─────────────────────────────────────────── */
-/* Hero: 56px → 40px(1068px) → 34px(640px) → 28px(419px) */
 @media (max-width: 1068px) {
-  .text-hero-display { font-size: 40px; }
+  .text-hero-display { font-size: 44px; }
 }
 @media (max-width: 640px) {
-  .text-hero-display { font-size: 34px; }
-  .text-display-lg   { font-size: 28px; }
+  .text-hero-display { font-size: 36px; }
+  .text-display-lg   { font-size: 30px; }
 }
 @media (max-width: 419px) {
-  .text-hero-display { font-size: 28px; }
+  .text-hero-display { font-size: 30px; }
 }
 
 /* ─── Tile Sections ─────────────────────────────────────────────────── */
+/* 다크 타일 = dusk. 푹은 다크 면을 거의 안 쓰므로, 가능하면 한 섹션만 사용 권장. */
 .tile-light {
   background: var(--canvas);
   color: var(--ink);
@@ -254,23 +273,23 @@ body {
   .tile-dark,
   .tile-dark-2,
   .tile-dark-3 {
-    padding: 48px 0;
+    padding: 56px 0;
   }
 }
 
 /* ─── Content Container ─────────────────────────────────────────────── */
 .content-wrap {
-  max-width: 980px;
+  max-width: 720px;
   margin: 0 auto;
   padding: 0 var(--space-lg);
 }
 .content-wrap-wide {
-  max-width: 1440px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 var(--space-lg);
+  padding: 0 var(--space-xl);
 }
 
-/* ─── Content Shadow (이미지 전용) ──────────────────────────────────── */
+/* ─── Content Shadow ────────────────────────────────────────────────── */
 .shadow-content {
   box-shadow: var(--shadow-content);
 }

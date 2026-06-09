@@ -107,7 +107,7 @@ export function ValueChain() {
                   <ul style={{ display: "flex", flexDirection: "column", gap: "8px", listStyle: "none", padding: 0, margin: 0 }}>
                     {s.items.map((item) => (
                       <li key={item} style={{ display: "flex", gap: "8px" }}>
-                        <span style={{ color: "var(--primary)", flexShrink: 0, marginTop: "2px" }}>✓</span>
+                        <span style={{ color: "var(--ink-muted-48)", flexShrink: 0, marginTop: "2px" }}>—</span>
                         <span className="text-body" style={{ color: "var(--ink)" }}>{item}</span>
                       </li>
                     ))}
@@ -129,7 +129,7 @@ export function ValueChain() {
             gap: "12px",
           }}
         >
-          <span style={{ fontSize: "18px", flexShrink: 0 }}>♻️</span>
+          <span className="text-caption" style={{ color: "var(--body-muted)", flexShrink: 0 }}>순환 구조</span>
           <p className="text-body" style={{ color: "var(--body-on-dark)" }}>
             <span style={{ color: "var(--primary-on-dark)", fontWeight: 600 }}>B2C 생산 부산물·중간품</span>이
             B2B 사료첨가제 원료로 재활용 →{" "}

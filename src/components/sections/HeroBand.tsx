@@ -119,16 +119,16 @@ export function HeroBand() {
               {badges.map((b) => (
                 <span
                   key={b}
-                  className="text-caption"
+                  className="text-fine-print"
                   style={{
                     color: "var(--ink-muted-48)",
                     border: "1px solid var(--hairline)",
-                    borderRadius: "var(--rounded-pill)",
+                    borderRadius: "var(--rounded-sm)",
                     padding: "4px 12px",
                     background: "var(--canvas)",
                   }}
                 >
-                  ✓ {b}
+                  {b}
                 </span>
               ))}
             </div>
@@ -145,12 +145,9 @@ export function HeroBand() {
                 color: "var(--body-on-dark)",
               }}
             >
-              {/* Mock header bar */}
+              {/* Header bar */}
               <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "20px" }}>
-                <span style={{ width: "10px", height: "10px", borderRadius: "50%", background: "rgba(255,95,86,0.7)", display: "inline-block" }} />
-                <span style={{ width: "10px", height: "10px", borderRadius: "50%", background: "rgba(255,189,46,0.7)", display: "inline-block" }} />
-                <span style={{ width: "10px", height: "10px", borderRadius: "50%", background: "rgba(39,201,63,0.7)", display: "inline-block" }} />
-                <span className="text-caption" style={{ color: "var(--body-muted)", marginLeft: "8px" }}>실증 성과 대시보드</span>
+                <span className="text-fine-print" style={{ color: "var(--body-muted)", letterSpacing: "0.08em", textTransform: "uppercase" }}>실증 성과 대시보드</span>
               </div>
 
               {/* Stat grid */}
@@ -171,7 +168,7 @@ export function HeroBand() {
                     }}
                   >
                     <div className="text-caption" style={{ color: "var(--body-muted)", marginBottom: "4px" }}>{item.label}</div>
-                    <div className="text-display-md" style={{ color: "var(--primary-on-dark)", fontVariantNumeric: "numerator" }}>{item.val}</div>
+                    <div className="text-display-md" style={{ color: "var(--primary-on-dark)", fontFamily: "\"JetBrains Mono\", ui-monospace, monospace" }}>{item.val}</div>
                   </div>
                 ))}
               </div>
