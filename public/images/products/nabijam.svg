@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180">
+  <!-- Background -->
+  <rect width="320" height="180" fill="#FFF7ED"/>
+  <circle cx="260" cy="-20" r="110" fill="#FED7AA" opacity="0.45"/>
+  <circle cx="30" cy="190" r="90" fill="#FDBA74" opacity="0.25"/>
+
+  <!-- Moon -->
+  <path d="M230 30 Q210 55 215 85 Q230 105 260 98 Q235 120 208 108 Q178 90 182 55 Q190 20 230 30Z" fill="#FED7AA" opacity="0.8"/>
+  <circle cx="238" cy="65" r="4" fill="#FB923C" opacity="0.35"/>
+  <circle cx="248" cy="85" r="2.5" fill="#FB923C" opacity="0.25"/>
+  <circle cx="225" cy="82" r="3" fill="#FB923C" opacity="0.3"/>
+
+  <!-- Stars -->
+  <circle cx="280" cy="30" r="2.5" fill="#FB923C" opacity="0.6"/>
+  <circle cx="295" cy="50" r="1.8" fill="#FDBA74" opacity="0.8"/>
+  <circle cx="268" cy="18" r="1.5" fill="#F97316" opacity="0.5"/>
+  <circle cx="305" cy="38" r="1.2" fill="#FB923C" opacity="0.6"/>
+  <!-- Star shapes -->
+  <path d="M290 20 L291.5 17 L293 20 L290 20Z M291.5 17 L294 19 L291.5 21 L291.5 17Z" fill="#F97316" opacity="0.5"/>
+
+  <!-- Butterfly (나비) -->
+  <g transform="translate(60, 22)">
+    <!-- Left upper wing -->
+    <path d="M80 72 Q40 20 20 30 Q10 60 40 78 Q60 82 80 72Z" fill="#FDBA74" stroke="#F97316" stroke-width="1.5" opacity="0.85"/>
+    <!-- Right upper wing -->
+    <path d="M80 72 Q120 20 140 30 Q150 60 120 78 Q100 82 80 72Z" fill="#FED7AA" stroke="#F97316" stroke-width="1.5" opacity="0.85"/>
+    <!-- Left lower wing -->
+    <path d="M80 76 Q45 85 35 105 Q50 118 75 100 Q80 88 80 76Z" fill="#FDBA74" stroke="#EA580C" stroke-width="1.5" opacity="0.8"/>
+    <!-- Right lower wing -->
+    <path d="M80 76 Q115 85 125 105 Q110 118 85 100 Q80 88 80 76Z" fill="#FED7AA" stroke="#EA580C" stroke-width="1.5" opacity="0.8"/>
+    <!-- Wing patterns -->
+    <circle cx="55" cy="52" r="8" fill="#FB923C" opacity="0.3"/>
+    <circle cx="107" cy="52" r="8" fill="#FB923C" opacity="0.25"/>
+    <circle cx="58" cy="96" r="6" fill="#EA580C" opacity="0.2"/>
+    <circle cx="103" cy="96" r="6" fill="#EA580C" opacity="0.2"/>
+    <!-- Body -->
+    <ellipse cx="80" cy="76" rx="4" ry="18" fill="#9A3412" opacity="0.5"/>
+    <!-- Antennae -->
+    <path d="M78 60 Q72 44 66 36" stroke="#9A3412" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M82 60 Q88 44 94 36" stroke="#9A3412" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <circle cx="66" cy="36" r="3" fill="#F97316" opacity="0.7"/>
+    <circle cx="94" cy="36" r="3" fill="#F97316" opacity="0.7"/>
+  </g>
+
+  <!-- Sleep Z's -->
+  <text x="200" y="140" fill="#F97316" font-family="system-ui,sans-serif" font-size="22" font-weight="800" opacity="0.35">z</text>
+  <text x="218" y="120" fill="#FB923C" font-family="system-ui,sans-serif" font-size="16" font-weight="800" opacity="0.3">z</text>
+  <text x="232" y="105" fill="#FDBA74" font-family="system-ui,sans-serif" font-size="11" font-weight="800" opacity="0.4">z</text>
+
+  <!-- Sales badge -->
+  <rect x="218" y="10" width="94" height="26" rx="13" fill="#EA580C"/>
+  <text x="265" y="27" text-anchor="middle" fill="white" font-family="system-ui,sans-serif" font-size="12" font-weight="700">누적 1.5억 완판</text>
+
+  <!-- Spec chip -->
+  <rect x="8" y="150" width="124" height="22" rx="6" fill="white" stroke="#FED7AA" stroke-width="1.5"/>
+  <text x="70" y="165" text-anchor="middle" fill="#9A3412" font-family="'Courier New',monospace" font-size="10" font-weight="600">ISO 22000 · 수면 건강</text>
+</svg>

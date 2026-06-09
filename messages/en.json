@@ -1,0 +1,27 @@
+{
+  "meta": {
+    "title": "Yuilfood — ESG through Fermentation Technology",
+    "description": "Korea's first 6th-industry company realizing carbon-neutral livestock farming with garlic peel fermentation technology"
+  },
+  "hero": {
+    "headline": "One garlic peel\nchanges everything",
+    "sub": "Fermentation Tech × ESG Circular Economy × Public-Private Dual Track",
+    "cta_primary": "Request Sample",
+    "cta_secondary": "View Technology",
+    "stat_methane": "Methane 39%↓",
+    "stat_roi": "ROI 430%",
+    "badge_iso": "ISO 22000",
+    "badge_fda": "FDA Registered",
+    "badge_patent": "5 Patents",
+    "badge_장영실": "Jang Young-sil Award"
+  },
+  "nav": {
+    "technology": "Technology",
+    "products": "Products",
+    "esg": "ESG",
+    "about": "About",
+    "ir": "IR",
+    "contact": "Contact",
+    "sample": "Request Sample"
+  }
+}

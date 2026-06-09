@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180">
+  <!-- Background -->
+  <rect width="320" height="180" fill="#EFF6FF"/>
+  <circle cx="270" cy="-20" r="110" fill="#DBEAFE" opacity="0.7"/>
+  <circle cx="20" cy="180" r="80" fill="#BFDBFE" opacity="0.4"/>
+
+  <!-- Garlic bulb -->
+  <g transform="translate(60, 30)">
+    <!-- Outer bulb -->
+    <ellipse cx="50" cy="82" rx="38" ry="44" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+    <!-- Clove left -->
+    <ellipse cx="36" cy="74" rx="14" ry="20" fill="#BFDBFE" stroke="#2563EB" stroke-width="1.5" transform="rotate(-18 36 74)"/>
+    <!-- Clove right -->
+    <ellipse cx="64" cy="74" rx="14" ry="20" fill="#BFDBFE" stroke="#2563EB" stroke-width="1.5" transform="rotate(18 64 74)"/>
+    <!-- Clove center -->
+    <ellipse cx="50" cy="66" rx="11" ry="17" fill="#93C5FD" stroke="#2563EB" stroke-width="1.5"/>
+    <!-- Stem -->
+    <line x1="50" y1="38" x2="50" y2="20" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Leaves -->
+    <path d="M50 28 Q72 18 80 22 Q68 36 50 28Z" fill="#BAE6FD" opacity="0.8"/>
+    <path d="M50 28 Q28 18 20 22 Q32 36 50 28Z" fill="#BAE6FD" opacity="0.8"/>
+    <!-- Bottom root bump -->
+    <path d="M30 122 Q50 130 70 122" stroke="#93C5FD" stroke-width="2" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Arrow right -->
+  <path d="M160 88 L178 88 M172 80 L180 88 L172 96" stroke="#93C5FD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Cow icon -->
+  <g transform="translate(188, 42)">
+    <!-- Body -->
+    <ellipse cx="48" cy="68" rx="36" ry="24" fill="#1E40AF" opacity="0.12"/>
+    <!-- Head -->
+    <circle cx="86" cy="50" r="22" fill="#1E40AF" opacity="0.15"/>
+    <!-- Ear -->
+    <ellipse cx="101" cy="35" rx="8" ry="5.5" fill="#3B82F6" opacity="0.35" transform="rotate(-25 101 35)"/>
+    <!-- Horn -->
+    <path d="M96 28 Q104 16 107 19" stroke="#2563EB" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Eye -->
+    <circle cx="91" cy="46" r="3" fill="#1E3A8A"/>
+    <circle cx="92" cy="45" r="1" fill="white"/>
+    <!-- Nose -->
+    <ellipse cx="99" cy="58" rx="8" ry="5.5" fill="#93C5FD" opacity="0.6"/>
+    <circle cx="96" cy="58" r="1.5" fill="#2563EB" opacity="0.5"/>
+    <circle cx="102" cy="58" r="1.5" fill="#2563EB" opacity="0.5"/>
+    <!-- Legs -->
+    <rect x="20" y="88" width="8" height="20" rx="4" fill="#1E40AF" opacity="0.15"/>
+    <rect x="35" y="88" width="8" height="20" rx="4" fill="#1E40AF" opacity="0.15"/>
+    <rect x="57" y="88" width="8" height="20" rx="4" fill="#1E40AF" opacity="0.15"/>
+    <rect x="72" y="88" width="8" height="20" rx="4" fill="#1E40AF" opacity="0.15"/>
+    <!-- Tail -->
+    <path d="M12 72 Q2 60 6 50 Q10 55 8 62" stroke="#3B82F6" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Grade badge -->
+  <rect x="220" y="10" width="90" height="26" rx="13" fill="#2563EB"/>
+  <text x="265" y="27" text-anchor="middle" fill="white" font-family="system-ui,sans-serif" font-size="12" font-weight="700">1++ 등급↑</text>
+
+  <!-- Spec chip -->
+  <rect x="8" y="150" width="130" height="22" rx="6" fill="white" stroke="#BFDBFE" stroke-width="1.5"/>
+  <text x="73" y="165" text-anchor="middle" fill="#1D4ED8" font-family="'Courier New',monospace" font-size="10" font-weight="600">ROI 430% · 특허 5건</text>
+</svg>

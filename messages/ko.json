@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "title": "(주)유일식품 — 발효기술로 ESG를 추구합니다",
+    "description": "마늘껍질 발효기술로 탄소중립 축산을 실현하는 6차산업 기업"
+  },
+  "hero": {
+    "headline": "마늘껍질 하나가\n세상을 바꿉니다",
+    "sub": "발효기술 × ESG 순환경제 × 공공민간 투트랙\nB2A·B2B·B2C 일체형 ESG 기술 기업",
+    "cta_primary": "샘플 신청",
+    "cta_secondary": "기술 자료 보기",
+    "stat_methane": "메탄 39%↓",
+    "stat_roi": "ROI 430%",
+    "badge_iso": "ISO 22000",
+    "badge_fda": "FDA 인증",
+    "badge_patent": "특허 5건",
+    "badge_장영실": "장영실상"
+  },
+  "summary": {
+    "card1_title": "시대적 당위성",
+    "card1_sub": "Why Now",
+    "card1_body": "축산업이 전 세계 온실가스의 16%를 차지하며, 메탄은 CO₂ 대비 21배 온난화 지수. 유일식품은 이 흐름의 직접 수혜자입니다.",
+    "card2_title": "검증된 기술",
+    "card2_sub": "Proven Tech",
+    "card2_body": "메탄 39.13%↓, 암모니아 48.25%↓, ROI 430% 실증. 특허 5건 + 공인기관 분석성적서 + 함평군 MOU 4자 협약.",
+    "card3_title": "공공민간 투트랙",
+    "card3_sub": "Dual Track",
+    "card3_body": "공공(B2A) 정책자금이 기술을 검증하고 민간(B2B·B2C) 시장을 열어주는 선순환. 정책자금 30~50% 레버리지로 Pre-A 진입."
+  },
+  "nav": {
+    "technology": "기술·특허",
+    "products": "제품",
+    "esg": "ESG",
+    "about": "회사소개",
+    "ir": "IR",
+    "contact": "문의하기",
+    "sample": "샘플 신청"
+  }
+}

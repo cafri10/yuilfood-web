@@ -1,0 +1,27 @@
+{
+  "meta": {
+    "title": "ユイルシクプム — 発酵技術でESGを追求します",
+    "description": "ニンニク皮発酵技術でカーボンニュートラル畜産を実現する6次産業企業"
+  },
+  "hero": {
+    "headline": "ニンニクの皮ひとつが\n世界を変えます",
+    "sub": "発酵技術 × ESG循環経済 × 官民デュアルトラック",
+    "cta_primary": "サンプル申請",
+    "cta_secondary": "技術資料を見る",
+    "stat_methane": "メタン39%↓",
+    "stat_roi": "ROI 430%",
+    "badge_iso": "ISO 22000",
+    "badge_fda": "FDA登録",
+    "badge_patent": "特許5件",
+    "badge_장영실": "張英実賞"
+  },
+  "nav": {
+    "technology": "技術・特許",
+    "products": "製品",
+    "esg": "ESG",
+    "about": "会社紹介",
+    "ir": "IR",
+    "contact": "お問い合わせ",
+    "sample": "サンプル申請"
+  }
+}

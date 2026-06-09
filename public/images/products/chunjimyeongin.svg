@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180">
+  <!-- Background -->
+  <rect width="320" height="180" fill="#F0FDF4"/>
+  <circle cx="280" cy="-10" r="100" fill="#DCFCE7" opacity="0.6"/>
+  <circle cx="10" cy="180" r="80" fill="#BBF7D0" opacity="0.4"/>
+
+  <!-- Vinegar bottle -->
+  <g transform="translate(92, 14)">
+    <!-- Bottle body -->
+    <path d="M28 62 Q16 70 16 100 L16 128 Q16 142 34 144 L66 144 Q84 142 84 128 L84 100 Q84 70 72 62Z" fill="#D1FAE5" stroke="#059669" stroke-width="2"/>
+    <!-- Bottle shoulder -->
+    <path d="M28 62 Q50 54 72 62" stroke="#059669" stroke-width="2" fill="none"/>
+    <!-- Neck -->
+    <rect x="40" y="24" width="20" height="42" rx="4" fill="#ECFDF5" stroke="#059669" stroke-width="2"/>
+    <!-- Cap -->
+    <rect x="36" y="16" width="28" height="14" rx="7" fill="#059669"/>
+    <!-- Label area -->
+    <rect x="22" y="84" width="56" height="50" rx="6" fill="white" opacity="0.7" stroke="#6EE7B7" stroke-width="1"/>
+    <!-- Label text lines -->
+    <text x="50" y="103" text-anchor="middle" fill="#065F46" font-family="system-ui,sans-serif" font-size="9" font-weight="700">천지명인</text>
+    <line x1="28" y1="108" x2="72" y2="108" stroke="#6EE7B7" stroke-width="1"/>
+    <text x="50" y="120" text-anchor="middle" fill="#047857" font-family="system-ui,sans-serif" font-size="7.5">마늘껍질 발효</text>
+    <text x="50" y="130" text-anchor="middle" fill="#047857" font-family="system-ui,sans-serif" font-size="7.5">분말식초</text>
+    <!-- Powder/sparkle effect -->
+    <circle cx="90" cy="72" r="3" fill="#34D399" opacity="0.6"/>
+    <circle cx="96" cy="60" r="2" fill="#6EE7B7" opacity="0.7"/>
+    <circle cx="84" cy="56" r="2.5" fill="#34D399" opacity="0.5"/>
+    <circle cx="14" cy="68" r="2" fill="#6EE7B7" opacity="0.5"/>
+    <circle cx="8" cy="82" r="3" fill="#34D399" opacity="0.4"/>
+    <!-- Sparkle stars -->
+    <path d="M98 48 L100 44 L102 48 L98 48Z" fill="#10B981" opacity="0.7"/>
+    <path d="M100 44 L104 46 L100 48 L100 44Z" fill="#10B981" opacity="0.5"/>
+    <path d="M6 52 L8 48 L10 52 L6 52Z" fill="#10B981" opacity="0.6"/>
+  </g>
+
+  <!-- Garlic illustration right -->
+  <g transform="translate(200, 55)" opacity="0.6">
+    <ellipse cx="40" cy="60" rx="28" ry="33" fill="#BBF7D0" stroke="#34D399" stroke-width="1.5"/>
+    <ellipse cx="30" cy="54" rx="11" ry="15" fill="#D1FAE5" stroke="#059669" stroke-width="1" transform="rotate(-15 30 54)"/>
+    <ellipse cx="50" cy="54" rx="11" ry="15" fill="#D1FAE5" stroke="#059669" stroke-width="1" transform="rotate(15 50 54)"/>
+    <ellipse cx="40" cy="48" rx="9" ry="13" fill="#6EE7B7" stroke="#059669" stroke-width="1"/>
+    <line x1="40" y1="27" x2="40" y2="14" stroke="#059669" stroke-width="2" stroke-linecap="round"/>
+    <path d="M40 20 Q55 12 62 16 Q52 26 40 20Z" fill="#BBF7D0" opacity="0.9"/>
+    <path d="M40 20 Q25 12 18 16 Q28 26 40 20Z" fill="#BBF7D0" opacity="0.9"/>
+  </g>
+
+  <!-- FDA badge -->
+  <rect x="218" y="10" width="94" height="26" rx="13" fill="#059669"/>
+  <text x="265" y="27" text-anchor="middle" fill="white" font-family="system-ui,sans-serif" font-size="12" font-weight="700">FDA 등록 완료</text>
+
+  <!-- Spec chip -->
+  <rect x="8" y="150" width="130" height="22" rx="6" fill="white" stroke="#BBF7D0" stroke-width="1.5"/>
+  <text x="73" y="165" text-anchor="middle" fill="#065F46" font-family="'Courier New',monospace" font-size="10" font-weight="600">특허 10-1926032호</text>
+</svg>

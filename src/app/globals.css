@@ -1,26 +1,276 @@
 @import "tailwindcss";
+@import "@fontsource/pretendard/300.css";
+@import "@fontsource/pretendard/400.css";
+@import "@fontsource/pretendard/600.css";
+@import "@fontsource/pretendard/700.css";
 
+/* ─── Design Tokens ─────────────────────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* ── Brand & Accent ── */
+  --primary:          #0066cc;   /* Action Blue — 유일한 인터랙션 색상 */
+  --primary-focus:    #0071e3;   /* 키보드 포커스 링 전용 */
+  --primary-on-dark:  #2997ff;   /* 다크 타일 위 인라인 링크 전용 */
+
+  /* ── Surface ── */
+  --canvas:           #ffffff;   /* 기본 캔버스 */
+  --canvas-parchment: #f5f5f7;   /* 교차 라이트 타일, 푸터 */
+  --surface-pearl:    #fafafc;   /* 보조 고스트 버튼 필 */
+  --surface-tile-1:   #272729;   /* 메인 다크 타일 */
+  --surface-tile-2:   #2a2a2c;   /* 연속 다크 타일 미세 분리 */
+  --surface-tile-3:   #252527;   /* 스택 하단·임베드 */
+  --surface-black:    #000000;   /* 글로벌 네비 배경 전용 */
+  --surface-chip:     #d2d2d7;   /* 이미지 위 원형 버튼 (~64% alpha) */
+
+  /* ── Text ── */
+  --ink:              #1d1d1f;   /* 라이트 배경 헤드라인·본문 전체 */
+  --body:             #1d1d1f;   /* ink와 동일 */
+  --body-on-dark:     #ffffff;   /* 다크 타일·네비 위 모든 텍스트 */
+  --body-muted:       #cccccc;   /* 다크 타일 보조 카피 */
+  --ink-muted-80:     #333333;   /* Pearl Button 위 본문 */
+  --ink-muted-48:     #7a7a7a;   /* 비활성·법적고지 */
+
+  /* ── Hairlines & Borders ── */
+  --divider-soft:     #f0f0f0;   /* 보조 버튼 링 (실제 rgba(0,0,0,0.04)) */
+  --hairline:         #e0e0e0;   /* 유틸리티 카드 1px 보더 */
+
+  /* ── Border Radius ── */
+  --rounded-none: 0px;
+  --rounded-xs:   5px;
+  --rounded-sm:   8px;
+  --rounded-md:   11px;
+  --rounded-lg:   18px;
+  --rounded-pill: 9999px;
+  --rounded-full: 9999px;
+
+  /* ── Spacing ── */
+  --space-xxs:     4px;
+  --space-xs:      8px;
+  --space-sm:      12px;
+  --space-md:      17px;
+  --space-lg:      24px;
+  --space-xl:      32px;
+  --space-xxl:     48px;
+  --space-section: 80px;
+
+  /* ── Shadow (콘텐츠 이미지 전용, 유일한 그림자) ── */
+  --shadow-content: rgba(0,0,0,0.22) 3px 5px 30px 0;
 }
 
+/* ─── Tailwind v4 Theme ─────────────────────────────────────────────── */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: "Pretendard", system-ui, sans-serif;
+  --font-mono: ui-monospace, monospace;
+
+  /* Colors */
+  --color-primary:          var(--primary);
+  --color-primary-focus:    var(--primary-focus);
+  --color-primary-on-dark:  var(--primary-on-dark);
+  --color-canvas:           var(--canvas);
+  --color-canvas-parchment: var(--canvas-parchment);
+  --color-surface-pearl:    var(--surface-pearl);
+  --color-surface-tile-1:   var(--surface-tile-1);
+  --color-surface-tile-2:   var(--surface-tile-2);
+  --color-surface-tile-3:   var(--surface-tile-3);
+  --color-surface-black:    var(--surface-black);
+  --color-surface-chip:     var(--surface-chip);
+  --color-ink:              var(--ink);
+  --color-body:             var(--body);
+  --color-body-on-dark:     var(--body-on-dark);
+  --color-body-muted:       var(--body-muted);
+  --color-ink-muted-80:     var(--ink-muted-80);
+  --color-ink-muted-48:     var(--ink-muted-48);
+  --color-divider-soft:     var(--divider-soft);
+  --color-hairline:         var(--hairline);
+
+  /* Border radius */
+  --radius-none: var(--rounded-none);
+  --radius-xs:   var(--rounded-xs);
+  --radius-sm:   var(--rounded-sm);
+  --radius-md:   var(--rounded-md);
+  --radius-lg:   var(--rounded-lg);
+  --radius-pill: var(--rounded-pill);
+  --radius-full: var(--rounded-full);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ─── Base ──────────────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: "Pretendard", system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.47;
+  letter-spacing: -0.374px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Typography Scale ──────────────────────────────────────────────── */
+/* 디자인 지침 토큰 기준 */
+
+.text-hero-display {
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 1.07;
+  letter-spacing: -0.28px;
+}
+.text-display-lg {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.10;
+  letter-spacing: 0;
+}
+.text-display-md {
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.47;
+  letter-spacing: -0.374px;
+}
+.text-lead {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.14;
+  letter-spacing: 0.196px;
+}
+.text-lead-airy {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+.text-tagline {
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.19;
+  letter-spacing: 0.231px;
+}
+.text-body-strong {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.24;
+  letter-spacing: -0.374px;
+}
+.text-body {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.47;
+  letter-spacing: -0.374px;
+}
+.text-dense-link {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 2.41;
+  letter-spacing: 0;
+}
+.text-caption {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: -0.224px;
+}
+.text-caption-strong {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.29;
+  letter-spacing: -0.224px;
+}
+.text-button-large {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: 0;
+}
+.text-button-utility {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.29;
+  letter-spacing: -0.224px;
+}
+.text-fine-print {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.12px;
+}
+.text-micro-legal {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: -0.08px;
+}
+.text-nav-link {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.12px;
+}
+
+/* ─── Responsive Typography ─────────────────────────────────────────── */
+/* Hero: 56px → 40px(1068px) → 34px(640px) → 28px(419px) */
+@media (max-width: 1068px) {
+  .text-hero-display { font-size: 40px; }
+}
+@media (max-width: 640px) {
+  .text-hero-display { font-size: 34px; }
+  .text-display-lg   { font-size: 28px; }
+}
+@media (max-width: 419px) {
+  .text-hero-display { font-size: 28px; }
+}
+
+/* ─── Tile Sections ─────────────────────────────────────────────────── */
+.tile-light {
+  background: var(--canvas);
+  color: var(--ink);
+  padding: var(--space-section) 0;
+}
+.tile-parchment {
+  background: var(--canvas-parchment);
+  color: var(--ink);
+  padding: var(--space-section) 0;
+}
+.tile-dark {
+  background: var(--surface-tile-1);
+  color: var(--body-on-dark);
+  padding: var(--space-section) 0;
+}
+.tile-dark-2 {
+  background: var(--surface-tile-2);
+  color: var(--body-on-dark);
+  padding: var(--space-section) 0;
+}
+.tile-dark-3 {
+  background: var(--surface-tile-3);
+  color: var(--body-on-dark);
+  padding: var(--space-section) 0;
+}
+
+@media (max-width: 640px) {
+  .tile-light,
+  .tile-parchment,
+  .tile-dark,
+  .tile-dark-2,
+  .tile-dark-3 {
+    padding: 48px 0;
+  }
+}
+
+/* ─── Content Container ─────────────────────────────────────────────── */
+.content-wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+.content-wrap-wide {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+/* ─── Content Shadow (이미지 전용) ──────────────────────────────────── */
+.shadow-content {
+  box-shadow: var(--shadow-content);
 }
